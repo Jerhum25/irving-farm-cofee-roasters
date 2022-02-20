@@ -1,0 +1,10 @@
+{
+  "name": "roaster-master",
+  "version": "1.0.0",
+  "description": "Maquette de site à intégrer",
+  "main": "index.js",
+  "scripts": {
+    "sass" : "sass --watch ./sass/main.scss:./css/style.css"  },
+  "author": "",
+  "license": "ISC"
+}
