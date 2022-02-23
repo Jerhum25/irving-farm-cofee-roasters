@@ -50,19 +50,24 @@ table {
 body{
     font-family: "open sans";
 }
+a{
+    text-decoration: none;
+    color: #000;
+}
 
 header{
-    background: url("../images/home_main_desktop.jpg");
+    background: url("../images/home_main_desktop.jpg") center;
     height: 900px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    p{
+    a{
         font-size: 25px;
         padding: 15px 25px;
         background-color: #fff;
+        text-decoration: none;
     }
     i{
         font-size: 65px;
@@ -102,7 +107,7 @@ main{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin: 15px auto 80px auto;
+        margin: 30px auto 40px auto;
         nav.left ul{
             display: flex;
             li{
@@ -156,7 +161,7 @@ main{
 
 .capucas{
     width: 100%;
-    background: url("../images/slideshow-1.jpg");
+    background: url("../images/slideshow-1.jpg") center;
     background-size: cover;
     height: 600px;
     position: relative;
@@ -207,7 +212,6 @@ main{
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 80px auto 80px auto;
-
     div{
         width: 46%;
         border-top: 5px solid #000;
@@ -253,6 +257,7 @@ main{
         button{
             color: #fff;
             background: #000;
+            cursor: pointer;
             }
         }
         p{
@@ -290,6 +295,9 @@ footer{
             li{
                 font-size: 25px;
                 margin-right: 5px;
+                a:hover{
+                    color: rgba($color: #000, $alpha: 0.7);
+                }
             }
         }
     }
@@ -300,5 +308,147 @@ footer{
         font-size: 13px;
         border-top: 1px solid lightgrey;
         padding: 20px;
+    }
+}
+
+@media screen and (max-width: 992px){
+    main{
+        section{
+            width: 100%;
+        }
+        .account{
+            div{
+                width: auto;
+                padding: 0 15px;
+                justify-content: space-around;
+            }
+        }
+        .menu{
+            width: auto;
+            padding: 0 20px;
+            .logo{
+                width: 150px;
+            }
+        }
+        .descriptions .container{
+            width: auto;
+            padding: 0 20px 40px 20px;
+            .description p{
+                font-size: 16px;
+            }
+        }
+        .capucas{
+            .container{
+                width: 70%;
+                div{
+                    width: 50%;
+                    background: rgba($color: #fff, $alpha: 0.5);
+                    h2{
+                        font-size: 25px;
+                    }
+                    p{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .wholesale{
+            width: auto;
+            padding: 0 20px;
+            h2{
+                font-size: 25px;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+        .subscribe{
+            .container{
+                width: auto;
+                padding: 0 20px;
+                p{
+                    margin-left: 3%;
+                    text-align: center;
+                }
+            }
+        }
+    } 
+    footer{
+        font-size: 12px;
+        .links .social ul{
+            flex-direction: column;
+            li{
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px){
+    main{
+        .account div{
+            flex-direction: column;
+            align-items: center;
+            p{
+                margin-bottom: 10px;
+            }
+            .links_account{
+                flex-direction: row;
+                margin: auto;
+            }
+        }
+        .menu{
+            .left ul,.right ul{
+                flex-direction: column;
+                text-align: center;
+
+            }
+        }
+        .descriptions{
+            .container{
+                flex-direction: column;
+                .description{
+                    width: auto;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        .capucas{
+            .container{
+                width: 85%;
+                i{
+                    font-size: 25px;
+                }
+                div{
+                    width: auto;
+                }
+            }
+        }
+        .wholesale{
+            width: auto;
+            flex-direction: column;
+            img{
+                width: 100%;
+            }
+            div{
+                width: auto;
+            }
+        }
+        .subscribe .container{
+            flex-direction: column;
+            button{
+                margin: 10px 0;
+            }
+            p{font-size: 20px;}
+        }
+    }
+    footer .links{
+        justify-content: space-around;
+        font-size: 15px;
     }
 }

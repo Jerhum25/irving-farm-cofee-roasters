@@ -55,8 +55,13 @@ body {
   font-family: "open sans";
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 header {
-  background: url("../images/home_main_desktop.jpg");
+  background: url("../images/home_main_desktop.jpg") center;
   height: 900px;
   width: 100%;
   display: flex;
@@ -64,10 +69,11 @@ header {
   align-items: center;
   justify-content: center;
 }
-header p {
+header a {
   font-size: 25px;
   padding: 15px 25px;
   background-color: #fff;
+  text-decoration: none;
 }
 header i {
   font-size: 65px;
@@ -104,7 +110,7 @@ main .menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 15px auto 80px auto;
+  margin: 30px auto 40px auto;
 }
 main .menu nav.left ul {
   display: flex;
@@ -156,7 +162,7 @@ main .menu nav.right ul li {
 
 .capucas {
   width: 100%;
-  background: url("../images/slideshow-1.jpg");
+  background: url("../images/slideshow-1.jpg") center;
   background-size: cover;
   height: 600px;
   position: relative;
@@ -253,6 +259,7 @@ main .menu nav.right ul li {
 .subscribe .container button {
   color: #fff;
   background: #000;
+  cursor: pointer;
 }
 .subscribe p {
   font-size: 25px;
@@ -292,6 +299,9 @@ footer .links .social ul li {
   font-size: 25px;
   margin-right: 5px;
 }
+footer .links .social ul li a:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
 footer .copyright {
   width: 55%;
   display: flex;
@@ -299,6 +309,129 @@ footer .copyright {
   font-size: 13px;
   border-top: 1px solid lightgrey;
   padding: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  main section {
+    width: 100%;
+  }
+  main .account div {
+    width: auto;
+    padding: 0 15px;
+    justify-content: space-around;
+  }
+  main .menu {
+    width: auto;
+    padding: 0 20px;
+  }
+  main .menu .logo {
+    width: 150px;
+  }
+  main .descriptions .container {
+    width: auto;
+    padding: 0 20px 40px 20px;
+  }
+  main .descriptions .container .description p {
+    font-size: 16px;
+  }
+  main .capucas .container {
+    width: 70%;
+  }
+  main .capucas .container div {
+    width: 50%;
+    background: rgba(255, 255, 255, 0.5);
+  }
+  main .capucas .container div h2 {
+    font-size: 25px;
+  }
+  main .capucas .container div p {
+    font-size: 16px;
+  }
+  main .wholesale {
+    width: auto;
+    padding: 0 20px;
+  }
+  main .wholesale h2 {
+    font-size: 25px;
+  }
+  main .wholesale p {
+    font-size: 16px;
+  }
+  main .subscribe .container {
+    width: auto;
+    padding: 0 20px;
+  }
+  main .subscribe .container p {
+    margin-left: 3%;
+    text-align: center;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+  footer .links .social ul {
+    flex-direction: column;
+  }
+  footer .links .social ul li {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .account div {
+    flex-direction: column;
+    align-items: center;
+  }
+  main .account div p {
+    margin-bottom: 10px;
+  }
+  main .account div .links_account {
+    flex-direction: row;
+    margin: auto;
+  }
+  main .menu .left ul, main .menu .right ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  main .descriptions .container {
+    flex-direction: column;
+  }
+  main .descriptions .container .description {
+    width: auto;
+    margin-bottom: 20px;
+  }
+  main .capucas .container {
+    width: 85%;
+  }
+  main .capucas .container i {
+    font-size: 25px;
+  }
+  main .capucas .container div {
+    width: auto;
+  }
+  main .wholesale {
+    width: auto;
+    flex-direction: column;
+  }
+  main .wholesale img {
+    width: 100%;
+  }
+  main .wholesale div {
+    width: auto;
+  }
+  main .subscribe .container {
+    flex-direction: column;
+  }
+  main .subscribe .container button {
+    margin: 10px 0;
+  }
+  main .subscribe .container p {
+    font-size: 20px;
+  }
+
+  footer .links {
+    justify-content: space-around;
+    font-size: 15px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
